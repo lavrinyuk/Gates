@@ -1,0 +1,6 @@
+@Gates_HostAddress = http://localhost:5069
+
+GET {{Gates_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
