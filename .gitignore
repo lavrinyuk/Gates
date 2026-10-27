@@ -1,5 +1,57 @@
-bin/
-obj/
-/packages/
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+artifacts/
+publish/
+*.nupkg
+*.snupkg
+
+# Tests and coverage
+[Tt]est[Rr]esult*/
+[Cc]overage/
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+BenchmarkDotNet.Artifacts/
+
+# IDEs
+.vs/
+.idea/
+.vscode/
+_ReSharper.Caches/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
 riderModule.iml
-/_ReSharper.Caches/
+
+# NuGet
+/packages/
+
+# Local configuration and secrets
+appsettings.*.local.json
+.env
+.env.*
+
+# Logs and temporary files
+*.log
+logs/
+*.tmp
+*.bak
+*.orig
+*.rej
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

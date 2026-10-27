@@ -1,6 +1,53 @@
 @Gates_HostAddress = http://localhost:5069
 
-GET {{Gates_HostAddress}}/weatherforecast/
-Accept: application/json
+### Корректный код
+POST {{Gates_HostAddress}}/api/gates/validate
+Content-Type: application/json
+
+{
+  "accessCode": "Dragon7!"
+}
+
+### Нарушения правил
+POST {{Gates_HostAddress}}/api/gates/validate
+Content-Type: application/json
+
+{
+  "accessCode": "dragon123"
+}
+
+### Три одинаковых символа подряд
+POST {{Gates_HostAddress}}/api/gates/validate
+Content-Type: application/json
+
+{
+  "accessCode": "Aaaa7!xy7"
+}
+
+### Слишком короткий код
+POST {{Gates_HostAddress}}/api/gates/validate
+Content-Type: application/json
+
+{
+  "accessCode": "1A!a"
+}
+
+### Пустой код
+POST {{Gates_HostAddress}}/api/gates/validate
+Content-Type: application/json
+
+{
+  "accessCode": ""
+}
+
+### Код не передан
+POST {{Gates_HostAddress}}/api/gates/validate
+Content-Type: application/json
+
+{
+}
+
+### Swagger UI
+GET {{Gates_HostAddress}}/swagger/index.html
 
 ###
