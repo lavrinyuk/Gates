@@ -91,16 +91,6 @@ Gates/
   Services/IAccessCodeValidator.cs      — контракт бизнес-логики
   Services/AccessCodeValidator.cs       — правила проверки
   Services/AccessCodeValidationResult.cs
-Gates.Tests/                            — юнит-тесты валидатора и контроллера
 ```
 
 Сервис `IAccessCodeValidator` зарегистрирован в DI как singleton, контроллер не содержит логики проверки.
-
-## Тесты
-
-```bash
-dotnet test
-```
-
-Покрыты корректные коды, каждое отдельное нарушение, несколько нарушений одновременно,
-отсутствующий/пустой код и HTTP-статусы контроллера.
